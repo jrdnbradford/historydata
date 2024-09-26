@@ -1,15 +1,16 @@
 # Biographical Directory of Federal Judges, 1789-present
-# http://www.uscourts.gov/JudgesAndJudgeships/BiographicalDirectoryOfJudges.aspx)
+# https://www.uscourts.gov/JudgesAndJudgeships/BiographicalDirectoryOfJudges.aspx)
 
 library(dplyr)
 library(tidyr)
 library(devtools)
 
-export_url <- "http://www.fjc.gov/history/export/jb.txt"
-download.file(export_url, destfile = "data-raw/judges.csv")
+data_file <- file.path("data-raw", "judges.csv")
+export_url <- "https://www.fjc.gov/history/export/jb.txt"
+download.file(export_url, destfile = data_file)
 
-judges <- read.csv("data-raw/judges.csv", stringsAsFactors = FALSE) %>%
-  tbl_df()
+judges <- read.csv(data_file, stringsAsFactors = FALSE) %>%
+  as_tibble()
 
 judges_people <- judges %>%
   select(judge_id = Judge.Identification.Number,
@@ -75,4 +76,4 @@ judges_appointments[judges_appointments == " "] <- NA
 judges_appointments <- judges_appointments %>%
   filter(!is.na(court_name))
 
-use_data(judges_people, judges_appointments, overwrite = TRUE)
+usethis::use_data(judges_people, judges_appointments, overwrite = TRUE)

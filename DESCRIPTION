@@ -1,7 +1,7 @@
 Package: historydata
 Type: Package
 Title: Datasets for Historians
-Version: 0.2.9001
+Version: 0.3.0
 Authors@R: c(person("Lincoln", "Mullen",
     role = c("aut", "cre"),
     email = "lincoln@lincolnmullen.com",
@@ -17,10 +17,10 @@ Description: These sample data sets are intended for historians
 Depends:
     R (>= 3.0.2)
 Suggests:
-    ggplot2 (>= 1.0.0)
+    ggplot2 (>= 3.0.0)
 License: MIT + file LICENSE
 LazyData: true
-URL: https://docs.ropensci.org/historydata, https://github.com/ropensci/historydata
+URL: https://docs.ropensci.org/historydata/, https://github.com/ropensci/historydata
 BugReports: https://github.com/ropensci/historydata/issues
 RoxygenNote: 7.3.2
 Encoding: UTF-8

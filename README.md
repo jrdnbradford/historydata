@@ -5,8 +5,11 @@
 # {historydata}
 
 <!-- badges: start -->
-[![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/historydata.png)](https://cran.r-project.org/package=historydata)
+
 [![R-CMD-check](https://github.com/ropensci/historydata/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ropensci/historydata/actions/workflows/R-CMD-check.yaml)
+[![CRAN
+status](https://www.r-pkg.org/badges/version/historydata)](https://CRAN.R-project.org/package=historydata)
+[![r-universe](https://ropensci.r-universe.dev/badges/historydata)](https://ropensci.r-universe.dev/historydata)
 <!-- badges: end -->
 
 ## Overview
@@ -18,13 +21,22 @@ network analysis.
 
 ## Installation
 
-To install the package from CRAN:
+To install the latest
+[r-universe](https://ropensci.r-universe.dev/historydata) build:
+
+``` r
+install.packages('historydata', repos = c('https://ropensci.r-universe.dev'))
+```
+
+To install the package from
+[CRAN](https://cran.r-project.org/package=historydata):
 
 ``` r
 install.packages("historydata")
 ```
 
-You can install the development version with {devtools}:
+You can install the development version from
+[GitHub](https://github.com/ropensci/historydata) with {devtools}:
 
 ``` r
 # install.packages("devtools")
@@ -33,10 +45,12 @@ devtools::install_github("ropensci/historydata")
 
 ## Use
 
-To list all the datasets in the package with their documentation:
+See the [package index
+reference](https://docs.ropensci.org/historydata/reference/index.html)
+for all the datasets in the package and their documentation. You can
+also use R’s builtin help:
 
 ``` r
-library(historydata)
 help(package = historydata)
 ```
 
@@ -56,5 +70,10 @@ head(catholic_dioceses)
 
 ## License
 
-This project is released under the MIT License:
-<http://lmullen.mit-license.org/>
+This project is released under the MIT License. See
+[LICENSE.md](./LICENSE.md) for details.
+
+------------------------------------------------------------------------
+
+[![rOpenSci
+footer](https://ropensci.org//public_images/github_footer.png)](https://ropensci.org/)

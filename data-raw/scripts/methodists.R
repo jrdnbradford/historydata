@@ -5,7 +5,7 @@ replace_na <- function(x, val = 0L) {
   ifelse(is.na(x), val, x)
 }
 
-methodists <- read_csv("data-raw/methodists.csv") %>%
+methodists <- read_csv(file.path("data-raw", "methodists.csv")) %>%
   filter(minutes_year != 1778,
          minutes_year != 1779,
          minutes_year != 1785) %>%
@@ -23,4 +23,4 @@ methodists <- read_csv("data-raw/methodists.csv") %>%
   select(year, conference, district, meeting, state, members_total,
          starts_with("members_"), url)
 
-devtools::use_data(methodists, overwrite = TRUE)
+usethis::use_data(methodists, overwrite = TRUE)

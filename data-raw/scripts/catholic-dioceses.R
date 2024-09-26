@@ -2,8 +2,8 @@ library(dplyr)
 library(lubridate)
 library(tidyr)
 
-catholic_dioceses <- read.csv("data-raw/catholic.dioceses.geocoded.csv",
-                              stringsAsFactors = FALSE)
+data_file <- file.path("data-raw", "catholic.dioceses.geocoded.csv")
+catholic_dioceses <- read.csv(data_file, stringsAsFactors = FALSE)
 catholic_dioceses <-
   catholic_dioceses %>%
   select(diocese,
@@ -15,5 +15,5 @@ catholic_dioceses <-
   gather(event, date, -diocese, -rite, -lat, -long) %>%
   filter(date != "") %>%
   mutate(date = mdy(date)) %>%
-  tbl_df()
-devtools::use_data(catholic_dioceses, overwrite = TRUE)
+  as_tibble()
+usethis::use_data(catholic_dioceses, overwrite = TRUE)

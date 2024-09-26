@@ -44,7 +44,7 @@ This data is compiled from several sources:
   Joseph Bernard Code, \emph{Dictionary of the American Hierarchy
   (1789-1964)} (New York: Joseph F. Wagner, 1964), 425-26.
 
-  For the United States since 1963, Canada, and Mexicode:
-  \url{http://www.catholic-hierarchy.org/}
+  For the United States since 1963, Canada, and Mexico:
+  \url{https://www.catholic-hierarchy.org/}
 }
 \keyword{datasets}
